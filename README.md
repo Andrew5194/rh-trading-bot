@@ -4,13 +4,19 @@ A robinhood trading bot. The trading bot uses the [Unofficial Robinhood API](htt
 
 ## Installation
 
-To build the robinhood trading bot Docker container, execute the following command from the root of this repo:
+Pull the Robinhood trading bot Docker image from Docker Hub and run the container by executing the following:
+
+```bash
+docker run -it Andrew5194:rh-trading-bot:latest
+```
+
+If you want to build from source, execute the following command from the root of this repo:
 
 ```bash
 docker build -f Dockerfile .
 ```
 
-Then, run the robinhood trading bot:
+Then, run the locally built Robinhood trading bot:
 
 ```bash
 docker run -it <container>
