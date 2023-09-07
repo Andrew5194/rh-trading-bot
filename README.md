@@ -6,9 +6,9 @@ A Robinhood trading bot. The trading bot uses the [Unofficial Robinhood API](htt
 
 ## Roadmap
 
-- [] Notifications
-- [] Analytics
-- [] Algo Trading
+- [ ] Notifications
+- [ ] Analytics
+- [ ] Algo Trading
 
 ## Installation
 
