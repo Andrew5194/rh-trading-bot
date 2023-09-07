@@ -7,7 +7,7 @@ A Robinhood trading bot. The trading bot uses the [Unofficial Robinhood API](htt
 ## Roadmap
 
 - [ ] Notifications
-- [ ] Analytics
+- [ ] Trade Analytics
 - [ ] Algo Trading
 
 ## Installation
