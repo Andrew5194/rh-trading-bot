@@ -13,7 +13,5 @@ docker build -f Dockerfile .
 Then, run the robinhood trading bot:
 
 ```bash
-docker run -it <container> -e RH_USERNAME -e RH_PASSWORD 
+docker run -it <container>
 ```
-
-docker run --env-file ./env.list ubuntu bash
