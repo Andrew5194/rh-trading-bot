@@ -7,15 +7,17 @@
 # To get a newer version, you will need to update the SHA.
 # You can also reference a tag or branch, but the action may change without warning.
 
-name: Publish Docker image
+name: Docker Image CI
 
 on:
-  release:
-    types: [published]
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
   push_to_registry:
-    name: Push Docker image to Docker Hub
+    name: Build and push Docker image to Docker Hub
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repo
