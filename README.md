@@ -4,6 +4,12 @@ A Robinhood trading bot. The trading bot uses the [Unofficial Robinhood API](htt
 
 ![Docker Image CI](https://github.com/Andrew5194/rh-trading-bot/actions/workflows/docker-image.yml/badge.svg)
 
+## Roadmap
+
+- [] Notifications
+- [] Analytics
+- [] Algo Trading
+
 ## Installation
 
 Pull the Robinhood trading bot Docker image from Docker Hub and run the container by executing the following:
