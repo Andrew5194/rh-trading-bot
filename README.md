@@ -19,7 +19,7 @@ For obvious reasons, you will need to have an already established Robinhood acco
 
 > **Note:** You will need to add the `chat:write` scope to your Slack Bot in order for it to send messages to your specified Slack user.
 
-If all goes well, you should see something like the following:
+If your Slack Bot is properly set up, you should see something like the following when you run the RH Trading Bot:
 
 ![working-slackbot](.images/working-slackbot.png)
 
