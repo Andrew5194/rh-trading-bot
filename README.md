@@ -12,7 +12,7 @@ A Robinhood trading bot. The trading bot uses the [Unofficial Robinhood API](htt
 
 ## Installation
 
-Let's get started! The fastest way to get up and running is through the [Quickstart](#quickstart) section. For developers wanting to experiment, look toward the [https://github.com/Andrew5194/rh-trading-bot#quickstart](#building-from-source)  
+Let's get started! The fastest way to get up and running is through the [Quickstart](#quickstart) section. For developers wanting to experiment, look toward the [Building from Source](#building-from-source) section.
 
 ### Quickstart
 
