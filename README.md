@@ -30,7 +30,7 @@ First set the required environment variables by executing the following:
 ```bash
 export RH_USERNAME=<your-robinhood-username>
 export RH_PASSWORD=<your-robinhood-password>
-export SLACK_BOT_TOKEN=<your-slackbot-token>
+export SLACK_BOT_TOKEN=<your-slack-bot-token>
 export SLACK_USER_ID=<your-slack-user-id>
 ```
 
