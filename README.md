@@ -37,6 +37,7 @@ export SLACK_USER_ID=<your-slack-user-id>
 Then, pull the `rh-trading-bot` Docker image from Docker Hub and run the container while passing in the environment variables:
 
 ```bash
+docker pull andrew5194/rh-trading-bot:main
 docker run -it -e RH_USERNAME \
     -e RH_PASSWORD \
     -e SLACK_BOT_TOKEN \
