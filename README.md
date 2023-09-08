@@ -2,7 +2,7 @@
 
 A Robinhood trading bot. The trading bot uses the [Unofficial Robinhood API](https://github.com/robinhood-unofficial/pyrh) to communicate with Robinhood.
 
-![Docker Image CI](https://github.com/Andrew5194/rh-trading-bot/actions/workflows/docker-image.yml/badge.svg)
+![Docker Build](https://github.com/Andrew5194/rh-trading-bot/actions/workflows/docker-build-push.yml/badge.svg)
 ![Pylint](https://github.com/Andrew5194/rh-trading-bot/actions/workflows/pylint.yml/badge.svg)
 
 ## Roadmap
