@@ -80,7 +80,8 @@ The milestones upon the horizon.
 
 ### Features
 
-- [ ] Notifications
+- [X] Notifications
+- [ ] Scheduler / Daily Reports
 - [ ] Trade Analytics
 - [ ] Algo Trading
 
