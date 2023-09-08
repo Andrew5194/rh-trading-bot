@@ -1,3 +1,4 @@
+"""A Robinhood Trading bot written in Python."""
 import os
 from pyrh import Robinhood
 
