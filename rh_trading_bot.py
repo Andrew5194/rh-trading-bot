@@ -10,6 +10,9 @@ account_profile = rh.get_account()
 
 client = WebClient(token=os.getenv("SLACK_BOT_TOKEN"))
 try:
-    response = client.chat_postMessage(channel=os.getenv("SLACK_USER_ID"), text=f"Your portfolio cash account balance is {account_profile['portfolio_cash']}")
+    response = client.chat_postMessage(
+        channel=os.getenv("SLACK_USER_ID"),
+        text=f"Your portfolio cash account balance is {account_profile['portfolio_cash']}",
+    )
 except SlackApiError as e:
     print(f"Got an error: {e.response['error']}")
