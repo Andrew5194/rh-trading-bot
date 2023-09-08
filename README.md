@@ -12,6 +12,8 @@ A Robinhood trading bot. The trading bot uses the [Unofficial Robinhood API](htt
 
 ## Installation
 
+Let's get started! The fastest way to get up and running is through the [Quickstart](#quickstart) section. For developers wanting to experiment, look toward the [https://github.com/Andrew5194/rh-trading-bot#quickstart](#building-from-source)  
+
 ### Quickstart
 
 First set the required `RH_USERNAME` and `RH_PASSWORD` environment variables by executing the following:
@@ -31,14 +33,16 @@ docker run -it -e RH_USERNAME \
 
 ### Building from Source
 
-If you would like to build from source, execute the following command from the root of this repo:
+If you would like to experiment and build from source, execute the following command from the root of this repo to build a new local Docker container named `rh-trading-bot`:
 
 ```bash
-docker build -f Dockerfile .
+docker build -f Dockerfile -t rh-trading-bot .
 ```
 
-Then, run the locally built Robinhood trading bot:
+Then, run the locally built `rh-trading-bot` Docker container:
 
 ```bash
-docker run -it <container>
+docker run -it -e RH_USERNAME \
+    -e RH_PASSWORD \
+    rh-trading-bot
 ```
