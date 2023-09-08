@@ -42,6 +42,15 @@ docker run -it -e RH_USERNAME \
     rh-trading-bot
 ```
 
+If you need to bypass the entrypoint script to access the container itself, run the following command:
+
+```bash
+docker run --entrypoint='' -it -e RH_USERNAME \
+    -e RH_PASSWORD \
+    rh-trading-bot \
+    bash
+```
+
 ## Roadmap
 
 The milestones upon the horizon.
