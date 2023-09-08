@@ -57,4 +57,3 @@ The milestones upon the horizon.
 - [ ] Docker Compose
 - [ ] Terraform
 - [ ] GKE
-
