@@ -11,7 +11,7 @@ Let's get started! The fastest way to get up and running is through the [Quickst
 
 ### Prerequisites
 
-For obvious reasons, you will need have an already established Robinhood account. In addition, to get notifications from the RH Trading bot, you will need to create your own Slack workspace and associated Slack Bot. Check out the following resources for tips on getting your Slack Workspace and Slack Bot up and running:
+For obvious reasons, you will need to have an already established Robinhood account. In addition, to get notifications from the RH Trading bot, you will need to create your own Slack workspace and associated Slack Bot. Check out the following resources for tips on getting your Slack Workspace and Slack Bot up and running:
 
 * [Creating a Slack Workspace](https://slack.com/help/articles/206845317-Create-a-Slack-workspace)
 * [Creating a SlackBot](https://api.slack.com/start/quickstart)
