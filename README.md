@@ -1,6 +1,6 @@
 # Robinhood Trading Bot
 
-A Robinhood trading bot. The trading bot uses the [Unofficial Robinhood API](https://github.com/robinhood-unofficial/pyrh) to communicate with Robinhood.
+A Robinhood trading bot. The trading bot uses the [Unofficial Robinhood API](https://github.com/robinhood-unofficial/pyrh) to communicate with Robinhood and a [Slackbot](https://join.slack.com/t/rhtradingbot/shared_invite/zt-22v2im2jn-5p2hWHhuJ9hElg6mWgNy2w) to push notifications to a user.
 
 ![Build](https://github.com/Andrew5194/rh-trading-bot/actions/workflows/build.yml/badge.svg)
 ![Pylint](https://github.com/Andrew5194/rh-trading-bot/actions/workflows/pylint.yml/badge.svg)
