@@ -1,1 +1,2 @@
-robin_stocks
+yarl==1.8.2
+pyrh==2.1.2
