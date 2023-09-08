@@ -1,3 +1,9 @@
+# Copyright (c) 2023, Andrew5194 / Andrew Yang
+# All rights reserved.
+
+# This source code is licensed under the BSD-style license found in the
+# LICENSE file in the root directory of this source tree.
+
 """A Robinhood Trading bot written in Python."""
 import os
 from pyrh import Robinhood
