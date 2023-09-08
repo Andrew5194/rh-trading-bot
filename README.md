@@ -1,6 +1,6 @@
 # Robinhood Trading Bot
 
-A Robinhood trading bot. The trading bot uses the [Unofficial Robinhood API](https://github.com/robinhood-unofficial/pyrh) to communicate with Robinhood and a [Slackbot](https://join.slack.com/t/rhtradingbot/shared_invite/zt-22v2im2jn-5p2hWHhuJ9hElg6mWgNy2w) to push notifications to a user.
+A Robinhood trading bot. The trading bot uses the [Unofficial Robinhood API](https://github.com/robinhood-unofficial/pyrh) to communicate with Robinhood and a [Slack Bot](https://api.slack.com/start/quickstart) to send notifications to a user.
 
 ![Build](https://github.com/Andrew5194/rh-trading-bot/actions/workflows/build.yml/badge.svg)
 ![Pylint](https://github.com/Andrew5194/rh-trading-bot/actions/workflows/pylint.yml/badge.svg)
@@ -9,13 +9,29 @@ A Robinhood trading bot. The trading bot uses the [Unofficial Robinhood API](htt
 
 Let's get started! The fastest way to get up and running is through the [Quickstart](#quickstart) section. For developers wanting to experiment, look toward the [Building from Source](#building-from-source) section.
 
+### Prerequisites
+
+As of right now, you will need to create your own Slack workspace and associated Slack Bot to receive notifications from the RH Trading Bot. Check out the following resources for tips on getting your Slack Workspace and Slack Bot up and running:
+
+* [Creating a Slack Workspace](https://slack.com/help/articles/206845317-Create-a-Slack-workspace)
+* [Creating a SlackBot](https://api.slack.com/start/quickstart)
+* [Finding a Slack User ID](https://www.workast.com/help/article/how-to-find-a-slack-user-id/)
+
+> **Note:** You will need to add the `chat:write` scope to your Slack Bot in order for it to send messages to your specified Slack user.
+
+If all goes well, you should see something like the following:
+
+![working-slackbot](.images/working-slackbot.png)
+
 ### Quickstart
 
-First set the required `RH_USERNAME` and `RH_PASSWORD` environment variables by executing the following:
+First set the required environment variables by executing the following:
 
 ```bash
 export RH_USERNAME=<your-robinhood-username>
 export RH_PASSWORD=<your-robinhood-password>
+export SLACK_BOT_TOKEN=<your-slackbot-token>
+export SLACK_USER_ID=<your-slack-user-id>
 ```
 
 Then, pull the `rh-trading-bot` Docker image from Docker Hub and run the container while passing in the environment variables:

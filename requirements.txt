@@ -1,2 +1,3 @@
+slack-sdk==3.21.3
 yarl==1.8.2
 pyrh==2.1.2
