@@ -5,22 +5,6 @@ A Robinhood trading bot. The trading bot uses the [Unofficial Robinhood API](htt
 ![Build](https://github.com/Andrew5194/rh-trading-bot/actions/workflows/build.yml/badge.svg)
 ![Pylint](https://github.com/Andrew5194/rh-trading-bot/actions/workflows/pylint.yml/badge.svg)
 
-## Roadmap
-
-The milestones upon the horizon.
-
-### Features
-
-- [ ] Notifications
-- [ ] Trade Analytics
-- [ ] Algo Trading
-
-### Deployment
-
-- [ ] Docker Compose
-- [ ] Terraform
-- [ ] GKE
-
 ## Installation
 
 Let's get started! The fastest way to get up and running is through the [Quickstart](#quickstart) section. For developers wanting to experiment, look toward the [Building from Source](#building-from-source) section.
@@ -57,3 +41,20 @@ docker run -it -e RH_USERNAME \
     -e RH_PASSWORD \
     rh-trading-bot
 ```
+
+## Roadmap
+
+The milestones upon the horizon.
+
+### Features
+
+- [ ] Notifications
+- [ ] Trade Analytics
+- [ ] Algo Trading
+
+### Deployment
+
+- [ ] Docker Compose
+- [ ] Terraform
+- [ ] GKE
+
