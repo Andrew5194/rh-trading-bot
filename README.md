@@ -7,9 +7,19 @@ A Robinhood trading bot. The trading bot uses the [Unofficial Robinhood API](htt
 
 ## Roadmap
 
+The milestones upon the horizon.
+
+### Features
+
 - [ ] Notifications
 - [ ] Trade Analytics
 - [ ] Algo Trading
+
+### Deployment
+
+- [ ] Docker Compose
+- [ ] Terraform
+- [ ] GKE
 
 ## Installation
 
