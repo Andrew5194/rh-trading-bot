@@ -38,7 +38,8 @@ Then, pull the `rh-trading-bot` Docker image from Docker Hub and run the contain
 
 ```bash
 docker pull andrew5194/rh-trading-bot:main
-docker run -it -e RH_USERNAME \
+docker run -it 
+    -e RH_USERNAME \
     -e RH_PASSWORD \
     -e SLACK_BOT_TOKEN \
     -e SLACK_USER_ID \
@@ -56,7 +57,8 @@ docker build -f Dockerfile -t rh-trading-bot .
 Then, run the locally built `rh-trading-bot` Docker container:
 
 ```bash
-docker run -it -e RH_USERNAME \
+docker run -it 
+    -e RH_USERNAME \
     -e RH_PASSWORD \
     -e SLACK_BOT_TOKEN \
     -e SLACK_USER_ID \
@@ -66,7 +68,8 @@ docker run -it -e RH_USERNAME \
 If you need to bypass the entrypoint script to access the container itself, run the following command:
 
 ```bash
-docker run --entrypoint='' -it -e RH_USERNAME \
+docker run --entrypoint='' -it 
+    -e RH_USERNAME \
     -e RH_PASSWORD \
     -e SLACK_BOT_TOKEN \
     -e SLACK_USER_ID \
