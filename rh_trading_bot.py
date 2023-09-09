@@ -7,8 +7,11 @@
 """A Robinhood Trading bot written in Python."""
 import os
 from pyrh import Robinhood
+import logging
 from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
+
+logging.basicConfig(level=logging.DEBUG)
 
 rh = Robinhood(username=os.getenv("RH_USERNAME"), password=os.getenv("RH_PASSWORD"))
 rh.login()
