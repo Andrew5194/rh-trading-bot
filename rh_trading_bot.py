@@ -6,8 +6,8 @@
 
 """A Robinhood Trading bot written in Python."""
 import os
-from pyrh import Robinhood
 import logging
+from pyrh import Robinhood
 from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
 
