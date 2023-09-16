@@ -39,10 +39,10 @@ SLACK_BOT_TOKEN=""
 SLACK_USER_ID=""
 ```
 
-Then, spin up the RH Trading Bot services by their containers:
+Then, spin up the RH Trading Bot services by building and running their containers:
 
 ```bash
-docker compose --env-file docker-compose.env up
+docker compose --env-file docker-compose.env up --build
 ```
 
 You should see something similar to:
@@ -54,13 +54,17 @@ rh-trading-bot-slackbot-1  | DEBUG:urllib3.connectionpool:https://api.robinhood.
 rh-trading-bot-slackbot-1  | Input mfa code:
 ```
 
-To input the MFA code, run the following in a separate terminal:
+Since the `docker compose` log output is aggregated, you won't be able to input your MFA code here. Instead, to input the MFA code and log into your Robinhood account, you'll need to run the [docker attach](https://docs.docker.com/engine/reference/commandline/attach/) command to attach to the `rh-trading-bot-slackbot-1` container itself and insert the MFA code there.
 
 ```bash
 docker attach rh-trading-bot-slackbot-1
+706416
+DEBUG:urllib3.connectionpool:https://api.robinhood.com:443 "POST /oauth2/token/ HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://api.robinhood.com:443 "GET /accounts/ HTTP/1.1" 200 None
+...
 ```
 
-Then key in the MFA code in the separate terminal window. See [docker attach](https://docs.docker.com/engine/reference/commandline/attach/) for more details.
+And that's it! The RH Trading Bot should now be deployed and fully operational!
 
 ### Building from Source
 
@@ -106,6 +110,6 @@ The milestones upon the horizon.
 
 ### Deployment
 
-- [ ] Docker Compose
+- [X] Docker Compose
 - [ ] Terraform
 - [ ] GKE
