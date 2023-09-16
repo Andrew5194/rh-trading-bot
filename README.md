@@ -54,7 +54,7 @@ rh-trading-bot-slackbot-1  | DEBUG:urllib3.connectionpool:https://api.robinhood.
 rh-trading-bot-slackbot-1  | Input mfa code:
 ```
 
-Since the `docker compose` log output is aggregated, you won't be able to input your MFA code here. Instead, to input the MFA code and log into your Robinhood account, you'll need to run the [docker attach](https://docs.docker.com/engine/reference/commandline/attach/) command to attach to the `rh-trading-bot-slackbot-1` container itself and insert the MFA code there.
+Since the `docker compose` log output is aggregated, you won't be able to input your MFA code here. Instead, you'll need to run the [docker attach](https://docs.docker.com/engine/reference/commandline/attach/) command in a separate terminal window to attach to the `rh-trading-bot-slackbot-1` container itself and insert the MFA code there.
 
 ```bash
 docker attach rh-trading-bot-slackbot-1
