@@ -25,26 +25,42 @@ If your Slack Bot is properly set up, you should see something like the followin
 
 ### Quickstart
 
-First set the required environment variables by executing the following:
+Create a `docker-compose.env` file and set the necessary environment variables needed for the RH Trading Bot:
+
+> **Tip:** Use the provided `docker-compose.env.template` file and remove the `.template` suffix once env vars have been set.
 
 ```bash
-export RH_USERNAME=<your-robinhood-username>
-export RH_PASSWORD=<your-robinhood-password>
-export SLACK_BOT_TOKEN=<your-slack-bot-token>
-export SLACK_USER_ID=<your-slack-user-id>
+POSTGRES_PASSWORD=""
+POSTGRES_USER=""
+POSTGRES_DB=""
+RH_USERNAME=""
+RH_PASSWORD=""
+SLACK_BOT_TOKEN=""
+SLACK_USER_ID=""
 ```
 
-Then, pull the `rh-trading-bot` Docker image from Docker Hub and run the container while passing in the environment variables:
+Then, spin up the RH Trading Bot services by their containers:
 
 ```bash
-docker pull andrew5194/rh-trading-bot:main
-docker run -it \
-    -e RH_USERNAME \
-    -e RH_PASSWORD \
-    -e SLACK_BOT_TOKEN \
-    -e SLACK_USER_ID \
-    andrew5194/rh-trading-bot:main
+docker compose --env-file docker-compose.env up
 ```
+
+You should see something similar to:
+
+```bash
+...
+rh-trading-bot-postgres-1  | 2023-09-16 07:28:29.362 UTC [1] LOG:  database system is ready to accept connections
+rh-trading-bot-slackbot-1  | DEBUG:urllib3.connectionpool:https://api.robinhood.com:443 "POST /oauth2/token/ HTTP/1.1" 200 None
+rh-trading-bot-slackbot-1  | Input mfa code:
+```
+
+To input the MFA code, run the following in a separate terminal:
+
+```bash
+docker attach rh-trading-bot-slackbot-1
+```
+
+Then key in the MFA code in the separate terminal window. See [docker attach](https://docs.docker.com/engine/reference/commandline/attach/) for more details.
 
 ### Building from Source
 
