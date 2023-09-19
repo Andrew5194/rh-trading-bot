@@ -106,6 +106,7 @@ docker run --entrypoint='' -it \
 ### Features
 
 - [X] Notifications
+- [ ] Persistent Storage
 - [ ] Scheduler / Daily Reports
 - [ ] Trade Analytics
 - [ ] Algo Trading
