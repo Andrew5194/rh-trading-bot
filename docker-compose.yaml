@@ -10,7 +10,7 @@ services:
     environment:
       - POSTGRES_PASSWORD
       - POSTGRES_USER
-      - POSTGRES_DB 
+      - POSTGRES_DB
   slackbot:
     depends_on:
       - postgres
@@ -20,6 +20,9 @@ services:
       - RH_PASSWORD
       - SLACK_BOT_TOKEN
       - SLACK_USER_ID
+      - POSTGRES_PASSWORD
+      - POSTGRES_USER
+      - POSTGRES_DB
     stdin_open: true # docker run -i
     tty: true        # docker run -t
 
