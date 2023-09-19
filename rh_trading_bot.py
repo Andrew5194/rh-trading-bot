@@ -14,17 +14,20 @@ from slack_sdk.errors import SlackApiError
 logging.basicConfig(level=logging.DEBUG)
 
 
-def bot_login():
-    rh = Robinhood(username=os.getenv("RH_USERNAME"), password=os.getenv("RH_PASSWORD"))
-    rh.login()
+def bot_login(rh_object: Robinhood):
+    """Authenticate RH Trading Bot with Robinhood."""
+    rh_object.login()
 
-    if rh.authenticated:
-        logging.info("Successfully logged in!")
-        return rh
+    if rh_object.authenticated:
+        logging.info("Successfully logged into Robinhood!")
+    else:
+        logging.info("Unable to authenticate with Robinhood.")
+    return rh_object
 
 
-def bot_slack_message(rh: Robinhood):
-    if rh is not Robinhood:
+def bot_slack_message(rh_object: Robinhood):
+    """Use authenticated Robinhood to perform action and send notifications via Slackbot."""
+    if rh_object is not Robinhood:
         logging.info(
             "Missing Robinhood object. Did you make sure to log in successfully?"
         )
@@ -33,11 +36,16 @@ def bot_slack_message(rh: Robinhood):
     try:
         response = client.chat_postMessage(
             channel=os.getenv("SLACK_USER_ID"),
-            text=f"Your portfolio cash account balance is {rh.get_account()['portfolio_cash']}",
+            text=f"Your portfolio cash balance is {rh_object.get_account()['portfolio_cash']}",
         )
-    except SlackApiError as e:
-        print(f"Got an error: {e.response['error']}")
+        logging.info(response)
+    except SlackApiError as slack_api_error:
+        print(f"Got an error: {slack_api_error.response['error']}")
 
 
-rh = bot_login()
-bot_slack_message(rh)
+rh_user = Robinhood(
+    username=os.getenv("RH_USERNAME"), password=os.getenv("RH_PASSWORD")
+)
+
+auth_rh_user = bot_login(rh_user)
+bot_slack_message(auth_rh_user)

@@ -1,4 +1,4 @@
-name: Pylint
+name: Pylint and PyTest
 
 on: [push]
 
@@ -23,4 +23,4 @@ jobs:
         pylint $(git ls-files '*.py')
     - name: Testing code with pytest
       run: |
-        pytest
+        pytest test.py
