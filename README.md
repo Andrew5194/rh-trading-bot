@@ -4,6 +4,7 @@ A Robinhood trading bot. The trading bot uses the [Unofficial Robinhood API](htt
 
 ![Build](https://github.com/Andrew5194/rh-trading-bot/actions/workflows/build.yml/badge.svg)
 ![Pylint](https://github.com/Andrew5194/rh-trading-bot/actions/workflows/pylint.yml/badge.svg)
+![Pytest](https://github.com/Andrew5194/rh-trading-bot/actions/workflows/pytest.yml/badge.svg)
 
 ## Installation
 
