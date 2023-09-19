@@ -50,7 +50,11 @@ You should see something similar to:
 
 ```bash
 ...
-rh-trading-bot-postgres-1  | 2023-09-16 07:28:29.362 UTC [1] LOG:  database system is ready to accept connections
+rh-trading-bot-postgres-1  | 2023-09-19 06:37:16.940 UTC [1] LOG:  database system is ready to accept connections
+rh-trading-bot-slackbot-1  | postgres:5432 - accepting connections
+rh-trading-bot-slackbot-1  | Starting robinhood trading bot...
+rh-trading-bot-slackbot-1  | INFO:root:Attempting to authenticate RH Trading Bot, use the docker attach command to input the MFA for this container.
+rh-trading-bot-slackbot-1  | DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.robinhood.com:443
 rh-trading-bot-slackbot-1  | DEBUG:urllib3.connectionpool:https://api.robinhood.com:443 "POST /oauth2/token/ HTTP/1.1" 200 None
 rh-trading-bot-slackbot-1  | Input mfa code:
 ```
