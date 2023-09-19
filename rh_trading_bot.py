@@ -18,7 +18,8 @@ logging.basicConfig(level=logging.DEBUG)
 def bot_login(rh_object: Robinhood):
     """Authenticate RH Trading Bot with Robinhood."""
     logging.info(
-        "Attempting to authenticate RH Trading Bot, use the docker attach command to input the MFA for this container."
+        """Attempting to authenticate RH Trading Bot, use the docker attach command to input the MFA
+        for this container."""
     )
     rh_object.login()
 
@@ -54,12 +55,12 @@ def bot_extract_data():
     pg_database = os.getenv("POSTGRES_DB")
 
     # PostgreSQL database URL
-    DATABASE_URL = (
+    database_url = (
         f"postgresql+psycopg2://{pg_user}:{pg_password}@postgres/{pg_database}"
     )
 
     # Create PostgreSQL database connection
-    engine = create_engine(DATABASE_URL)
+    engine = create_engine(database_url)
 
     # Connect to the database
     connection = engine.connect()
