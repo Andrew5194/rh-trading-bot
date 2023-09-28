@@ -32,7 +32,7 @@ jobs:
     - name: Commit changes
       uses: EndBug/add-and-commit@v4
       with:
-        author_name: Andrew Yang
+        author_name: GH Traffic Bot
         message: "Adding GitHub traffic"
         add: "./traffic/*"
         ref: "traffic"  # commits to branch "traffic" 
