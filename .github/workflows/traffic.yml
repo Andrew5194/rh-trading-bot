@@ -36,4 +36,4 @@ jobs:
         add: "./traffic/*"
         ref: "traffic"  # commits to branch "traffic" 
       env:
-        GITHUB_TOKEN: ${{secrets.TRAFFIC_ACTION_TOKEN}}
+        GITHUB_TOKEN: ${{ secrets.TRAFFIC_ACTION_TOKEN }}
