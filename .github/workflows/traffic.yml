@@ -4,10 +4,10 @@ on:
   push:
     branches: [ "main" ]
 
-# on:
-#   schedule: 
-#     # runs once a week on sunday
-#     - cron: "55 23 * * 0"
+on:
+  schedule: 
+    # runs once a day at midnight
+    - cron: "0 12 * * *"
     
 jobs:
   # This workflow contains a single job called "traffic"
@@ -18,7 +18,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
       with:
         ref: "traffic"
     
