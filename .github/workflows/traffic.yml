@@ -35,3 +35,5 @@ jobs:
         message: "Adding GitHub traffic"
         add: "./traffic/*"
         ref: "traffic"  # commits to branch "traffic" 
+      env:
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
