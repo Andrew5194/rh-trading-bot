@@ -20,6 +20,7 @@ jobs:
     - uses: actions/checkout@v4
       with:
         ref: "traffic"
+        token: ${{ secrets.TRAFFIC_ACTION_TOKEN }}
     
     # Calculates traffic and clones and stores in CSV file
     - name: GitHub traffic 
@@ -35,5 +36,3 @@ jobs:
         message: "Adding GitHub traffic"
         add: "./traffic/*"
         ref: "traffic"  # commits to branch "traffic" 
-      env:
-        GITHUB_TOKEN: ${{ secrets.TRAFFIC_ACTION_TOKEN }}
