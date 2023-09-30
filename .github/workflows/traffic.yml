@@ -6,7 +6,7 @@ on:
 
   schedule: 
     # runs once a day at midnight
-    - cron: "0 12 * * *"
+    - cron: "59 23 * * *"
     
 jobs:
   # This workflow contains a single job called "traffic"
